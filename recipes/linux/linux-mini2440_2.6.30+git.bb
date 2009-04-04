@@ -1,16 +1,19 @@
 DESCRIPTION = "Linux Kernel for mini2440 development board"
 SECTION = "kernel"
 LICENSE = "GPL"
-PR = "r11"
+PR = "r9"
 
 GGSRC = "http://www.xora.org.uk/oe/patches/"
 
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://repo.or.cz/linux-2.6/mini2440.git;protocol=git;branch=mini2440-stable-v2.6.29 \
+SRC_URI = "git://repo.or.cz/linux-2.6/mini2440.git;protocol=git;branch=mini2440-stable-v2.6.30 \
            file://defconfig-mini2440"
 
 S = "${WORKDIR}/git"
+
+KERNEL_IMAGETYPE = "uImage"
+UBOOT_ENTRYPOINT = "30008000"
 
 inherit kernel
 
@@ -22,4 +25,4 @@ do_configure() {
 	oe_runmake oldconfig
 }
 
-KERNEL_RELEASE = "2.6.29"
+KERNEL_RELEASE = "2.6.30"
