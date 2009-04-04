@@ -115,7 +115,7 @@ SRCREV_sequoa = "cf3b41e0c1111dbb865b6e34e9f3c3d3145a6093"
 SRC_URI_sequoia = "git://www.denx.de/git/u-boot.git;protocol=git;tag=cf3b41e0c1111dbb865b6e34e9f3c3d3145a6093 "
 
 SRC_URI_mini2440 = "git://repo.or.cz/u-boot-openmoko/mini2440.git;protocol=git;branch=dev-mini2440-stable"
-SRCREV_mini2440 = "3516c35fb777ca959e5cadf2156a792ca10e1cff"
+SRCREV_mini2440 = "294b4782963f4b50074d2e8cf386b1bb9afd1c51"
 
 SRC_URI_micro2440 = "git://repo.or.cz/u-boot-openmoko/mini2440.git;protocol=git;branch=dev-mini2440-stable"
 SRCREV_micro2440 = "3516c35fb777ca959e5cadf2156a792ca10e1cff"
@@ -149,7 +149,7 @@ do_configure_prepend_c7x0() {
 }
 
 do_deploy_prepend_mini2440() {
-	cp ${S}/u-boot-nand16k.bin ${S}/u-boot.bin
+	cp ${S}/u-boot-nand2k.bin ${S}/u-boot.bin
 }
 
 do_deploy_prepend_micro2440() {
